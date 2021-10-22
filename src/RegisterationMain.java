@@ -6,7 +6,7 @@ public class RegisterationMain {
 		UserRegisteration ur = new UserRegisteration();
 		Scanner sc = new Scanner(System.in);
 		
-		/*System.out.println("Enter the first name: ");
+		System.out.println("Enter the first name: ");
 		String fName = sc.next();
 		ur.firstName(fName);
 		
@@ -20,7 +20,7 @@ public class RegisterationMain {
 		
 		System.out.println("Enter the Mobile Number: ");
 		String mobileNumber = sc.next();
-		ur.phoneNumber(mobileNumber);*/
+		ur.phoneNumber(mobileNumber);
 		
 		System.out.println("Enter the Password: ");
 		String password = sc.next();

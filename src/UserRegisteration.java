@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 public class UserRegisteration {
 	
 	public void firstName(String firstName) {	
-		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
+		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
 		Matcher match = pattern.matcher(firstName);
 		if(match.find() && match.group().equals(firstName)) {
 			System.out.println("valid FirstName");	
@@ -15,7 +15,7 @@ public class UserRegisteration {
         }
 	
 	public void lastName(String lastName) {	
-		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
+		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
 		Matcher match = pattern.matcher(lastName);
 		if(match.find() && match.group().equals(lastName)) {
 			System.out.println("valid LastName");	
@@ -48,7 +48,7 @@ public class UserRegisteration {
         }
 
 	public void password(String password) {
-		Pattern pattern = Pattern.compile("^[a-zA-z]{8}$");
+		Pattern pattern = Pattern.compile("^[a-z](?=.*[A-Z]).{8,}$");
 		Matcher match = pattern.matcher(password);
 		if(match.find() && match.group().equals(password)) {
 			System.out.println("valid password");	
