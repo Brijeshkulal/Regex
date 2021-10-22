@@ -17,6 +17,10 @@ public class RegisterationMain {
 		System.out.println("Enter the Email: ");
 		String mailId = sc.next();
 		ur.emailId(mailId);
+		
+		System.out.println("Enter the Mobile Number: ");
+		String mobileNumber = sc.next();
+		ur.phoneNumber(mobileNumber);
 	}
 
 }
