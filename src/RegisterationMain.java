@@ -3,14 +3,20 @@ import java.util.Scanner;
 public class RegisterationMain {
 	
 	public static void main(String[] args) {
+		UserRegisteration ur = new UserRegisteration();
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the first name: ");
 		String fName = sc.next();
+		ur.firstName(fName);
+		
 		System.out.println("Enter the Last name: ");
 		String lName = sc.next();
-		UserRegisteration ur = new UserRegisteration();
-		ur.firstName(fName);
 		ur.lastName(lName);
+		
+		System.out.println("Enter the Email: ");
+		String mailId = sc.next();
+		ur.emailId(mailId);
 	}
 
 }

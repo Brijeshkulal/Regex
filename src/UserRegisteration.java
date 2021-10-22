@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 public class UserRegisteration {
 	
 	public void firstName(String firstName) {	
-		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
+		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
 		Matcher match = pattern.matcher(firstName);
 		if(match.find() && match.group().equals(firstName)) {
 			System.out.println("valid FirstName");	
@@ -15,13 +15,24 @@ public class UserRegisteration {
         }
 	
 	public void lastName(String lastName) {	
-		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
+		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");
 		Matcher match = pattern.matcher(lastName);
 		if(match.find() && match.group().equals(lastName)) {
 			System.out.println("valid LastName");	
 			}
 		else {
 			System.out.println("invalid lastName");
+			}
+        }
+	
+	public void emailId(String emailId) {	
+		Pattern pattern = Pattern.compile("^[a-zA-Z0-9+_.-]*[a-zA-Z0-9]?@[a-zA-Z0-9]+.([.][a-zA-Z]+)+$");
+		Matcher match = pattern.matcher(emailId);
+		if(match.find() && match.group().equals(emailId)) {
+			System.out.println("valid Email");	
+			}
+		else {
+			System.out.println("invalid Email");
 			}
         }
 }
